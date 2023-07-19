@@ -1,0 +1,152 @@
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* max-width: 1520px; */
+  padding: 20px 30px;
+  position: relative;
+}
+
+.inner-conatianer {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+.logo {
+  flex: 1;
+}
+
+.left-side {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex: 1;
+  /* justify-self: flex-start; */
+}
+
+.nav-actions {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right-side {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  flex: 3;
+  justify-content: flex-end;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.search-bar > input {
+  border: none;
+  background-color: #e1e1e1;
+  padding: 10px 32px;
+  border-radius: 5px;
+}
+
+.account > button {
+  border: none;
+  background-color: transparent;
+}
+
+.logo > a {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.nav-actions > a {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.account > button {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.search-bar > input {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.nav-actions > a:hover {
+  color: var(--background-color);
+}
+
+.account > button:hover {
+  color: var(--background-color);
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 5px;
+}
+
+.bar {
+  width: 24px;
+  height: 4px;
+  background-color: black;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 1350px) {
+  .right-side {
+    flex: 2;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .left-side {
+    display: none;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .right-side {
+    display: none;
+    width: 100%;
+    gap: 40px;
+  }
+  .hamburger {
+    display: flex;
+  }
+
+  .ham-active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .search-bar {
+    display: none;
+  }
+
+  .ham-active > .nav-actions {
+    flex-direction: column;
+  }
+
+  .inner-conatianer {
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .inner-conatianer > .logo {
+    justify-self: flex-start;
+  }
+}
